@@ -18,9 +18,11 @@
 
 AM_CFLAGS = -DSBINDIR=\"@sbindir@\" @GLIB_CFLAGS@ @DBUS_CFLAGS@ @DBUS_GLIB_CFLAGS@
 
-moduledir = @PAM_MODDIR@
-module_LTLIBRARIES = pam_dbus.la
+pamdir = @PAM_MODDIR@
+pam_PROGRAMS = pam_dbus.so
 
-pam_dbus_la_SOURCES = pam_dbus.c
-pam_dbus_la_LDFLAGS = -module -avoid-version  @DBUS_GLIB_LIBS@ @DBUS_LIBS@ @GLIB_LIBS@
-pam_dbus_la_CFLAGS = $(AM_CFLAGS)
+pam_dbus_so_SOURCES = pam_dbus.c
+pam_dbus_so_LDFLAGS = -shared --strip-all
+
+pam_dbus_so_LDADD = @DBUS_GLIB_LIBS@ @DBUS_LIBS@ @GLIB_LIBS@
+pam_dbus_so_CFLAGS = $(AM_CFLAGS)
