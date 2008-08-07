@@ -1,0 +1,12 @@
+Source: pam-dbus
+Section: admin
+Priority: optional
+Maintainer: Joachim Breitner <mail@joachim-breitner.de>
+Build-Depends: debhelper (>> 5.0.0), libpam0g-dev (>= 0.72), autotools-dev, libdbus-glib-1-dev
+Standards-Version: 3.7.3
+
+Package: libpam-dbus
+Architecture: any
+Depends: ${shlibs:Depends}
+Description: A PAM module which asks the logged in user for confirmation
+ TODO
