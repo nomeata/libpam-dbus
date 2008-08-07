@@ -24,7 +24,3 @@ module_LTLIBRARIES = pam_dbus.la
 pam_dbus_la_SOURCES = pam_dbus.c
 pam_dbus_la_LDFLAGS = -module -avoid-version  @DBUS_GLIB_LIBS@ @DBUS_LIBS@ @GLIB_LIBS@
 pam_dbus_la_CFLAGS = $(AM_CFLAGS)
-
-bin_PROGRAMS = pamtest
-
-pamtest_SOURCES = pamtest.c
