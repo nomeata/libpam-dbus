@@ -1,0 +1,13 @@
+pam-dbus
+=======
+
+This simple pam module will, when being used to authenticate a (typically 
+remote) user, use dbus to ask any currently logged in (typically local)
+user if that is ok.
+
+It connects to the object "de.nomeata.pam_dbus" at the path "/de/nomeata/pam_dbus",
+expecting the "de.nomeata.pam_dbus" interface and then call the method "MayLogin".
+It passes four strings (service, user, rhost, ruser), some of which might be NULL
+and expectes one boolean value, which should be true if the remote user may login.
+
+It has a timeout of 5 minutes after which the UI may stop waiting for a reply.
