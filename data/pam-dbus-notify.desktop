@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=pam-dbus Handler
+Comment=Answers authentication requests by pam-dbus
+Exec=pam-dbus-notify
+Terminal=false
+Type=Application
+StartupNotify=false
+X-GNOME-Autostart-enabled=true
