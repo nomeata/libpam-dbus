@@ -1,2 +1,2 @@
 lib/security
-data/pam_dbus.conf /etc/dbus-1/system.d/
+etc/dbus-1/system.d/

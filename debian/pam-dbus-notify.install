@@ -1,1 +1,3 @@
-handlers/pam-dbus-notify /usr/bin
+usr/bin
+etc/xdg/autostart
+
