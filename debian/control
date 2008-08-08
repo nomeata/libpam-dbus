@@ -8,11 +8,12 @@ Standards-Version: 3.7.3
 Package: libpam-dbus
 Architecture: any
 Depends: ${shlibs:Depends}
+Recommends: pam-dbus-notify
 Description: A PAM module which asks the logged in user for confirmation
  TODO
 
 Package: pam-dbus-notify
 Architecture: all
-Depends: python, python-notify, python-dbus, python-gtk2
+Depends: libpam-dbus, python, python-notify, python-dbus, python-gtk2
 Description: Handler for the pam-dbus module, using notification-daemon
  TODO
