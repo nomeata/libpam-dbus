@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=pam-dbus Handler
 Comment=Answers authentication requests by pam-dbus
-Exec=pam-dbus-notify
+Exec=@pkgdatadir@/pam-dbus-notify
 Terminal=false
 Type=Application
 StartupNotify=false
