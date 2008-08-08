@@ -1,2 +1,2 @@
 EXTRA_DIST=*
-bin_SCRIPTS=pam-dbus-notify
+pkgdata_SCRIPTS=pam-dbus-notify
