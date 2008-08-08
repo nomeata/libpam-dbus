@@ -1,5 +1,5 @@
 pam-dbus
-=======
+========
 
 This simple pam module will, when being used to authenticate a (typically 
 remote) user, use dbus to ask any currently logged in (typically local)
@@ -11,3 +11,36 @@ It passes four strings (service, user, rhost, ruser), some of which might be NUL
 and expectes one boolean value, which should be true if the remote user may login.
 
 It has a timeout of 5 minutes after which the UI may stop waiting for a reply.
+
+Configuration
+=============
+
+If you want all access to a certain service, (e.g ssh) to be handled by pam_dbus,
+replace pam_unix (or @include common-auth on Debian systems) by
+
+>>>>>>>>>snip
+auth required pam_dbus.so
+<<<<<<<<<<snip
+
+in /etc/pam.d/ssh.
+
+A more advanced configuration can be achieved with pam_succeed_if. The following
+snippet, if put instead of "@include common-auth", will make all login requests 
+for the user "gast" be handled by libpam_dbus, while every other request will be
+handled as usual:
+
+>>>>>>>>>snip
+# gast may login using pam-dbus
+auth [default=2 success=ignore] pam_succeed_if.so quiet user = gast
+auth [success=ok new_authtok_reqd=done ignore=ignore default=die] pam_dbus.so
+auth [default=1] pam_permit.so
+
+# Standard Un*x authentication.
+@include common-auth
+<<<<<<<<<<snip
+
+Credits
+=======
+
+pam_dbus was written by Joachim Breitner <mail@joachim-breitner>, during DebConf8,
+having an application on the OpenMoko Freerunner in mind.
