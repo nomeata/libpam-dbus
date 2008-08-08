@@ -43,7 +43,7 @@ class PamDbusAnswer(dbus.service.Object):
                             "as user %s. " % user + 
                             "Do you want to allow that?")
 
-         n.set_timeout(5*60*1000)
+         #n.set_timeout(0) #5*60*1000)
          n.add_action("permit", "Permit login", notify_cb, ret_cb)
          n.add_action("deny", "Deny login", notify_cb,ret_cb)
          n.connect("closed",lambda n: notify_cb(n,"closed", ret_cb))
