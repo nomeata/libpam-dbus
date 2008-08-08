@@ -10,3 +10,9 @@ Architecture: any
 Depends: ${shlibs:Depends}
 Description: A PAM module which asks the logged in user for confirmation
  TODO
+
+Package: pam-dbus-gnome
+Architecture: all
+Depends: python, python-notify, python-dbus
+Description: Handler for the pam-dbus module, using notification-daemon
+ TODO
