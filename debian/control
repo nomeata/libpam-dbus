@@ -11,8 +11,8 @@ Depends: ${shlibs:Depends}
 Description: A PAM module which asks the logged in user for confirmation
  TODO
 
-Package: pam-dbus-gnome
+Package: pam-dbus-notify
 Architecture: all
-Depends: python, python-notify, python-dbus
+Depends: python, python-notify, python-dbus, python-gtk2
 Description: Handler for the pam-dbus module, using notification-daemon
  TODO
