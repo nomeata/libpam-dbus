@@ -39,6 +39,27 @@ auth [default=1] pam_permit.so
 @include common-auth
 <<<<<<<<<<snip
 
+Note that you need to set "UsePAM yes" in /etc/ssh/sshd_config to make this actually
+work.
+
+DBus-Interface
+==============
+
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<node name="/de/nomeata/pam_dbus">
+
+  <interface name="de.nomeata.pam_dbus">
+    <method name="MayLogin">
+      <arg type="s" name="service" direction="in" />
+      <arg type="s" name="user" direction="in" />
+      <arg type="s" name="rhost" direction="in" />
+      <arg type="s" name="ruser" direction="int" />
+      <arg type="b" name="login_ok" direction="out" />
+    </method>
+  </interface>
+</node>
+
 Credits
 =======
 
