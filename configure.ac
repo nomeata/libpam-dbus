@@ -91,5 +91,5 @@ AC_SUBST(DBUS_GLIB_LIBS)
 
 
 
-AC_CONFIG_FILES([src/Makefile Makefile])
+AC_CONFIG_FILES([src/Makefile data/Makefile Makefile])
 AC_OUTPUT
