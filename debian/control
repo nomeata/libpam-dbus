@@ -1,7 +1,7 @@
 Source: pam-dbus
 Section: admin
 Priority: optional
-Maintainer: Joachim Breitner <mail@joachim-breitner.de>
+Maintainer: Joachim Breitner <nomeata@debian.org>
 Build-Depends: debhelper (>> 7), libpam0g-dev (>= 0.72), autotools-dev, libdbus-glib-1-dev
 Standards-Version: 3.7.3
 
