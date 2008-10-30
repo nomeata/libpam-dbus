@@ -76,8 +76,8 @@ AC_TYPE_UID_T
 
 PKG_CHECK_MODULES(GLIB, glib-2.0 >= 2.10, dummy=yes,
                                 AC_MSG_ERROR(libglib-2.0 is required))
-AC_SUBST(DBUS_CFLAGS)
-AC_SUBST(DBUS_LIBS)
+AC_SUBST(GLIB_CFLAGS)
+AC_SUBST(GLIB_LIBS)
 
 PKG_CHECK_MODULES(DBUS, dbus-1 >= 1.0, dummy=yes,
 				AC_MSG_ERROR(libdbus is required))
