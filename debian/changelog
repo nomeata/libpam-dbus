@@ -1,3 +1,10 @@
+pam-dbus (0.2-1) unstable; urgency=low
+
+  * New upstream release
+    + uses libtool (hopefully closes: #504051)
+
+ -- Joachim Breitner <nomeata@debian.org>  Fri, 31 Oct 2008 00:35:16 +0100
+
 pam-dbus (0.1-1) unstable; urgency=low
 
   * Initial release
