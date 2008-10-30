@@ -19,8 +19,8 @@
 # along with pam_dbus; if not, write to the Free Software Foundation,
 # Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.
 
-AC_PREREQ(2.57)
-AC_INIT([pam_dbus], [0.1], [Joachim Breitner <mail@joachim-breitner.de>])
+AC_PREREQ(2.61)
+AC_INIT([pam_dbus],[0.2],[Joachim Breitner <mail@joachim-breitner.de>])
 AC_CONFIG_SRCDIR([src/pam_dbus.c])
 AC_CONFIG_HEADERS([config.h])
 AM_INIT_AUTOMAKE([foreign -Wall])
