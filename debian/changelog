@@ -1,8 +1,8 @@
-pam-dbus (0.2-2) UNRELEASED; urgency=low
+pam-dbus (0.2-2) unstable; urgency=low
 
   * Do not install .la files (Closes: #633198)
 
- -- Joachim Breitner <nomeata@debian.org>  Sun, 10 Jul 2011 12:35:21 +0200
+ -- Joachim Breitner <nomeata@debian.org>  Sun, 10 Jul 2011 12:35:49 +0200
 
 pam-dbus (0.2-1) unstable; urgency=low
 
