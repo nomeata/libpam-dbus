@@ -20,7 +20,7 @@
 # Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA.
 
 AC_PREREQ(2.61)
-AC_INIT([pam_dbus],[0.2],[Joachim Breitner <mail@joachim-breitner.de>])
+AC_INIT([pam_dbus],[0.2.1],[Joachim Breitner <mail@joachim-breitner.de>])
 AC_CONFIG_SRCDIR([src/pam_dbus.c])
 AC_CONFIG_HEADERS([config.h])
 AM_INIT_AUTOMAKE([foreign -Wall])
@@ -44,14 +44,7 @@ AC_CHECK_HEADER([security/pam_modules.h],, [AC_MSG_ERROR([*** Sorry, you have to
 
 LIBS="$LIBS -ldl -lpam -lpam_misc"
 
-case "$host" in
-  *-*-linux*)
-    PAM_MODDIR="/lib/security"
-    ;;
-  *)
-    PAM_MODDIR="/usr/lib"
-    ;;
-esac
+PAM_MODDIR="/lib/security"
 AC_SUBST(PAM_MODDIR)
 
 # Checks for header files.
