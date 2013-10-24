@@ -1,8 +1,8 @@
-pam-dbus (0.2.1-2) UNRELEASED; urgency=low
+pam-dbus (0.2.1-2) unstable; urgency=low
 
   * Build with autotools_dev (Closes: #727486)
 
- -- Joachim Breitner <nomeata@debian.org>  Thu, 24 Oct 2013 09:55:40 +0200
+ -- Joachim Breitner <nomeata@debian.org>  Thu, 24 Oct 2013 09:55:59 +0200
 
 pam-dbus (0.2.1-1) unstable; urgency=low
 
