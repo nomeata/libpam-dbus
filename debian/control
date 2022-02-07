@@ -1,0 +1,23 @@
+Source: pam-dbus
+Section: admin
+Priority: optional
+Maintainer: Joachim Breitner <nomeata@debian.org>
+Build-Depends: debhelper (>> 7), libpam0g-dev (>= 0.72), dh-autoreconf, libdbus-glib-1-dev
+Standards-Version: 3.8.0
+
+Package: libpam-dbus
+Architecture: any
+Depends: ${shlibs:Depends}
+Recommends: pam-dbus-notify
+Description: A PAM module which asks the logged in user for confirmation
+ This simple pam module will, when being used to authenticate a (typically 
+ remote) user, use D-Bus to ask any currently logged in (typically local)
+ user if that is ok.
+
+
+Package: pam-dbus-notify
+Architecture: all
+Depends: libpam-dbus, python, python-notify, python-dbus, python-gtk2
+Description: Handler for the pam-dbus module, using notification-daemon
+ pam-dbus-notify is a per-session daemon that displays requests from
+ libpam-dbus-notify, using notification daemon popups.
